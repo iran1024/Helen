@@ -1,0 +1,31 @@
+version: "3.8"
+services:
+  helenserver.bugengine.web:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=https://*:6080
+    ports:
+      - "6080:6080"
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+
+  bge-dapr:
+    command: [ "./daprd", "-app-id", "bge", "--app-protocol" , "grpc" , "-app-port", "6080" , "-components-path", "/components" , "--app-ssl" , "true" ]
+    volumes: 
+      - "../HelenServer.Dapr/Components/:/components"
+
+  helenserver.filestorage.web:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=https://*:6082
+    ports:
+      - "6082:6082"
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+
+  fs-dapr:
+    command: [ "./daprd", "-app-id", "fs", "--app-protocol" , "grpc" , "-app-port", "6082" , "-components-path", "/components" , "--app-ssl" , "true" ]
+    volumes: 
+      - "../HelenServer.Dapr/Components/:/components"

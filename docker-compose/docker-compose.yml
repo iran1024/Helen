@@ -1,0 +1,29 @@
+version: "3.8"
+
+services:
+  helenserver.bugengine.web:
+    image: ${DOCKER_REGISTRY-}helenserver.bugengine.web
+    build:
+      context: .
+      dockerfile: ../BugEngine/HelenServer.BugEngine.Web/Dockerfile
+
+  bge-dapr:
+    image: "daprio/daprd:latest"
+    depends_on:
+      - helenserver.bugengine.web
+    network_mode: "service:helenserver.bugengine.web"
+
+  helenserver.filestorage.web:
+    image: ${DOCKER_REGISTRY-}helenserver.filestorage.web
+    build:
+      context: .
+      dockerfile: ../FileStorage/HelenServer.FileStorage.Web/Dockerfile
+
+  fs-dapr:
+    image: "daprio/daprd:latest"
+    depends_on:
+      - helenserver.filestorage.web
+    network_mode: "service:helenserver.filestorage.web"
+
+  dapr-placement:
+    image: "daprio/dapr:1.7.0"

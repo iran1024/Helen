@@ -1,0 +1,38 @@
+<Project>
+
+  <PropertyGroup>
+    <Suffix_Dal>.Dal</Suffix_Dal>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Using Include="System.Text"/>
+    <Using Include="System.Text.Json"/>
+    <Using Include="System.Text.Json.Serialization"/>
+    <Using Include="System.Reflection"/>
+    <Using Include="System.Security.Claims"/>
+    <Using Include="System.Linq.Expressions"/>
+
+    <Using Include="HelenServer.Core"/>
+
+    <Using Include="Microsoft.Extensions.Logging"/>
+    <Using Include="Microsoft.Extensions.Options"/>
+    <Using Include="Microsoft.Extensions.Primitives"/>
+    <Using Include="Microsoft.Extensions.Configuration"/>
+    <Using Include="Microsoft.Extensions.DependencyInjection"/>
+    <Using Include="Microsoft.Extensions.Diagnostics.HealthChecks"/>
+
+    <Using Include="Microsoft.AspNetCore.Mvc"/>
+    <Using Include="Microsoft.AspNetCore.Http"/>
+    <Using Include="Microsoft.AspNetCore.Routing"/>
+    <Using Include="Microsoft.AspNetCore.Builder"/>
+    <Using Include="Microsoft.AspNetCore.Diagnostics.HealthChecks"/>
+
+    <Using Include="Grpc.Core"/>
+    <Using Include="ProtoBuf.Grpc"/>
+  </ItemGroup>
+
+  <ItemGroup Condition=" '$(RootNamespace.EndsWith($(Suffix_Dal)))' == 'True' ">
+    <Using Include="HelenServer.Data.SqlServer"/>
+  </ItemGroup>
+
+</Project>

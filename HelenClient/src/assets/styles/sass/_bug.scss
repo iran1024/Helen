@@ -1,0 +1,76 @@
+.layout-mobile-module-block {
+  display: none;
+}
+
+@media (max-width: 991px) {
+  .layout-mobile-module-block {
+    display: flex;
+    position: fixed;    
+    z-index: 997;
+    top: 1rem;
+    left: 6rem;
+    background-color: transparent;
+    transition: left .2s;
+    
+    .layout-mobile-module-menu {
+      overflow-y: auto;
+      display: inline-flex;
+      margin-left: 3.5rem;
+      position: absolute;
+      flex-direction: column;
+      background-color: var(--surface-overlay);
+      box-shadow: 0px 3px 5px rgba(0, 0, 0, .02),
+      0px 0px 2px rgba(0, 0, 0, .05),
+      0px 1px 4px rgba(0, 0, 0, .08);
+      border-radius: 12px;
+      padding: 1rem;
+      top: 1rem;
+      min-width: 200px;      
+      height: calc(100vh - 16rem);
+      list-style: none;
+      white-space:nowrap;
+      text-overflow: ellipsis;
+    }
+
+    .layout-mobile-button {      
+      display: flex;      
+      width: 100%;
+      height: 2.5rem;
+      border: 0;
+      background-color: transparent;
+      cursor: pointer;
+      justify-content: flex-start;
+      border-radius: 12px;
+      padding: .9rem;
+      color: var(--text-color-secondary);
+
+      &:hover {
+        color: var(--text-color);
+        background-color: var(--surface-hover);
+        transition: background-color .5s;
+      }            
+    }
+
+    span {
+      font-size: 1em;
+      line-height: 1em;
+    }      
+  }
+
+  .moudle-menu-mask {
+    z-index: 996;
+    background-color: var(--maskbg);
+    
+    &.moudle-menu-mask-enter-from,
+    &.moudle-menu-mask-leave-to {
+      background-color: transparent;
+    }
+  }
+}
+
+#mobile-module-menubtn {
+  box-shadow: 0;
+  &:focus {
+    box-shadow: 0 0 0 0.2rem #c7d2fe;
+  }
+}

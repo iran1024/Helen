@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>e61a21cb-88c8-482f-bf9f-5623c2a2d5a5</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\..</DockerfileContext>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.15.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\HelenServer.Dapr\HelenServer.Dapr.csproj" />
+    <ProjectReference Include="..\..\HelenServer.Grpc.Contracts\HelenServer.Grpc.Contracts.csproj" />
+    <ProjectReference Include="..\HelenServer.FileStorage.Contracts\HelenServer.FileStorage.Contracts.csproj" />
+    <ProjectReference Include="..\HelenServer.FileStorage.Controllers\HelenServer.FileStorage.Controllers.csproj" />
+    <ProjectReference Include="..\HelenServer.FileStorage.Dal\HelenServer.FileStorage.Dal.csproj" />
+    <ProjectReference Include="..\HelenServer.FileStorage.FastDFS\HelenServer.FileStorage.FastDFS.csproj" />
+    <ProjectReference Include="..\HelenServer.FileStorage.Services\HelenServer.FileStorage.Services.csproj" />
+  </ItemGroup>
+
+</Project>

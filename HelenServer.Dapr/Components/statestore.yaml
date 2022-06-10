@@ -1,0 +1,20 @@
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: hs-statestore
+spec:
+  type: state.redis
+  version: v1
+  metadata:
+  - name: redisHost
+    value: 172.25.13.5:6379
+  - name: redisPassword
+    secretKeyRef:
+      name: state.redisPassword
+      key: state.redisPassword
+  - name: actorStateStore
+    value: "false"
+  - name: keyPrefix
+    value: "none"
+auth:
+  secretStore: hs-secrets

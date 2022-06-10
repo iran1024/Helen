@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>6d49d99e-2f68-4962-ac34-335aeaf49bb4</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerComposeProjectPath>..\..\docker-compose.dcproj</DockerComposeProjectPath>
+    <DockerfileContext>..\..</DockerfileContext>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\HelenServer.Core\HelenServer.Core.csproj" />
+    <ProjectReference Include="..\..\HelenServer.Dapr\HelenServer.Dapr.csproj" />
+    <ProjectReference Include="..\..\HelenServer.Grpc.Contracts\HelenServer.Grpc.Contracts.csproj" />
+    <ProjectReference Include="..\HelenServer.BugEngine.Contracts\HelenServer.BugEngine.Contracts.csproj" />
+    <ProjectReference Include="..\HelenServer.BugEngine.Controllers\HelenServer.BugEngine.Controllers.csproj" />
+    <ProjectReference Include="..\HelenServer.BugEngine.Dal\HelenServer.BugEngine.Dal.csproj" />
+    <ProjectReference Include="..\HelenServer.BugEngine.Services\HelenServer.BugEngine.Services.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.15.1" />
+  </ItemGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties appsettings_1json__JsonSchema="" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

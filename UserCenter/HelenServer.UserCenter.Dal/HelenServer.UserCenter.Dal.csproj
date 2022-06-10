@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\HelenServer.Data.SqlServer\HelenServer.Data.SqlServer.csproj" />
+    <ProjectReference Include="..\..\HelenServer.Grpc.Contracts\HelenServer.Grpc.Contracts.csproj" />
+    <ProjectReference Include="..\HelenServer.UserCenter.Contracts\HelenServer.UserCenter.Contracts.csproj" />
+  </ItemGroup>
+</Project>

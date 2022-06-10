@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\HelenServer.Dapr\HelenServer.Dapr.csproj" />
+    <ProjectReference Include="..\Authentication\HelenServer.UserCenter.Authentication\HelenServer.UserCenter.Authentication.csproj" />
+    <ProjectReference Include="..\HelenServer.UserCenter.Contracts\HelenServer.UserCenter.Contracts.csproj" />
+    <ProjectReference Include="..\HelenServer.UserCenter.Controllers\HelenServer.UserCenter.Controllers.csproj" />
+    <ProjectReference Include="..\HelenServer.UserCenter.Dal\HelenServer.UserCenter.Dal.csproj" />
+    <ProjectReference Include="..\HelenServer.UserCenter.Services\HelenServer.UserCenter.Services.csproj" />
+  </ItemGroup>
+</Project>

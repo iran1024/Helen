@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FastDFSCore" Version="1.7.0" />
+    <PackageReference Include="FastDFSCore.Transport.DotNetty" Version="1.7.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\HelenServer.FileStorage.Contracts\HelenServer.FileStorage.Contracts.csproj" />
+  </ItemGroup>
+
+</Project>

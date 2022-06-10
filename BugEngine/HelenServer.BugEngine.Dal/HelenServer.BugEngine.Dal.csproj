@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\HelenServer.Dapr\HelenServer.Dapr.csproj" />
+    <ProjectReference Include="..\..\HelenServer.Data.SqlServer\HelenServer.Data.SqlServer.csproj" />
+    <ProjectReference Include="..\HelenServer.BugEngine.Contracts\HelenServer.BugEngine.Contracts.csproj" />
+  </ItemGroup>
+</Project>

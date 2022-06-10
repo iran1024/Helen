@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.Docker.Sdk">
+  <PropertyGroup Label="Globals">
+    <ProjectVersion>2.1</ProjectVersion>
+    <ProjectGuid>38d6a2c0-f11c-4aff-9b8a-e196592c1f23</ProjectGuid>
+    <DockerEngine>Localhost</DockerEngine>
+    <DockerTargetOS>Linux</DockerTargetOS>
+    <DockerProjectName>dockercompose2022060814395742760</DockerProjectName>
+    <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
+    <DockerServiceUrl>{Scheme}://{ServiceHost}:{ServicePort}/swagger</DockerServiceUrl>
+    <DockerServiceName>helenserver.bugengine.web</DockerServiceName>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="docker-compose.override.yml">
+      <DependentUpon>docker-compose.yml</DependentUpon>
+    </None>
+    <None Include="docker-compose.yml" />
+    <None Include=".dockerignore" />
+  </ItemGroup>
+</Project>

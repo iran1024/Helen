@@ -1,0 +1,19 @@
+{
+  "profiles": {
+    "Docker Compose": {
+      "commandName": "DockerCompose",
+      "commandVersion": "1.0",
+      "composeEngine": "Localhost",
+      "composeLaunchAction": "LaunchBrowser",
+      "composeLaunchServiceName": "helenserver.bugengine.web",
+      "composeLaunchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/swagger",
+      "serviceActions": {
+        "helenserver.bugengine.web": "StartDebugging",
+        "bge-dapr": "StartWithoutDebugging",
+        "helenserver.filestorage.web": "StartDebugging",
+        "fs-dapr": "StartWithoutDebugging",
+        "dapr-placement": "DoNotStart"
+      }
+    }
+  }
+}

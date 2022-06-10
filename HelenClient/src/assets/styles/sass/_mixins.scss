@@ -1,0 +1,33 @@
+@mixin focused() {
+    outline: 0 none;
+    outline-offset: 0;
+    transition: box-shadow .2s;
+    box-shadow: var(--focus-ring);
+}
+
+@mixin focused-inset() {
+    outline: 0 none;
+    outline-offset: 0;
+    transition: box-shadow .2s;
+    box-shadow: inset var(--focus-ring);
+}
+
+@mixin scrollbar() {
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+        width: .7rem;
+        height: .7em;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 12px;
+        background-color: #d1d1d1;
+    }
+
+    &:hover {
+        &::-webkit-scrollbar-thumb {
+            background-color: #adadad;
+        }
+    }
+}

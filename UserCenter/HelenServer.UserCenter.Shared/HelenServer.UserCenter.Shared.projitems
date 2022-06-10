@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>b8676cee-ab84-44b1-8361-b829b1795554</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>HelenServer.UserCenter.Shared</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Models\LoginModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\LoginResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\LogoutInputModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\LogoutModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\OperationType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\RegisterModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\UserModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\UserPasswordModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\UserSearchModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\UserStatus.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\UserStatusModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\ValidModel.cs" />
+  </ItemGroup>
+</Project>
